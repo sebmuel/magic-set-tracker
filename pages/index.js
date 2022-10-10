@@ -42,7 +42,7 @@ export default function Home() {
       {error ? <h2>{error}</h2> : null}
       <button onClick={handleSearch}>Suchen</button>
       {results
-        ? results.map((result) => <SetList result={result}></SetList>)
+        ? results.map((result) => <SetList key={result[0]} result={result}></SetList>)
         : null}
     </div>
   );

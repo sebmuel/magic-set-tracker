@@ -8,7 +8,7 @@ export default function SetList({result}) {
     <div>
       <h2 className="set-name">{setName}</h2>
       <div className="cardGrid">
-      {cards.map(card => <Card cardData={card}/>)}
+      {cards.map(card => <Card key={card.id} cardData={card}/>)}
       </div>
     </div>
   )
