@@ -1,9 +1,13 @@
 import styles from "../styles/Home.module.css";
 import { useState, useRef } from "react";
 import fetchList from "../services/fetchList";
-import cardsToSet from "../services/getSets";
+import {
+  sortSet,
+  cardsToSet,
+  filterCards,
+  validateSearchString,
+} from "../services/helpers";
 import SetList from "../components/SetList";
-import sortSet from "../services/sortSetList";
 
 export default function Home() {
   const cardList = useRef();
@@ -12,26 +16,23 @@ export default function Home() {
 
   const handleSearch = async () => {
     setError(null);
+
     const searchString = cardList.current.value;
-    if (searchString === "") {
+    if (!validateSearchString(searchString)) {
       setError("Provide valid string");
       return;
     }
-    const names = searchString
-      .split("\n")
-      .map((s) => s.substring(s.indexOf(" ") + 1));
+    const names = filterCards(searchString);
 
     const result = await fetchList(names);
-
+  
     if (result.name === "AxiosError") {
-      console.log(result.messsage);
       setError(result.message);
       return;
     }
-    
     const array = [];
-    for (const [key, value] of Object.entries(cardsToSet(result))){
-      array.push([key, value])
+    for (const [key, value] of Object.entries(cardsToSet(result))) {
+      array.push([key, value]);
     }
     setResults(array.sort(sortSet));
   };
@@ -42,7 +43,9 @@ export default function Home() {
       {error ? <h2>{error}</h2> : null}
       <button onClick={handleSearch}>Suchen</button>
       {results
-        ? results.map((result) => <SetList key={result[0]} result={result}></SetList>)
+        ? results.map((result) => (
+            <SetList key={result[0]} result={result}></SetList>
+          ))
         : null}
     </div>
   );
