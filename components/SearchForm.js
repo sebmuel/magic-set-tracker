@@ -32,7 +32,7 @@ export default function SearchForm({ enterCards }) {
     for (const [key, value] of Object.entries(cardsToSet(result))) {
       array.push([key, value]);
     }
-   enterCards(array.sort(sortSet));
+    enterCards(array.sort(sortSet));
   };
 
   return (
