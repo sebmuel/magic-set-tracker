@@ -1,16 +1,15 @@
 import { useState } from "react";
 import { Accordion } from "flowbite-react";
 import SearchForm from "../components/SearchForm";
-import SetList from "../components/SetList";
 import Card from "../components/Card";
 
 export default function Home() {
   const [results, setResults] = useState([]);
 
   return (
-    <div>
+    <div className="max-w-[90%] mx-auto p-6">
       <SearchForm enterCards={setResults}></SearchForm>
-    <div className=" max-w-[80%] mx-auto">
+    <div className="">
     <Accordion alwaysOpen={true}>
       {results
         ? results.map((result) => (
