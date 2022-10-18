@@ -19,14 +19,18 @@
   src: url("../public/fonts/FuzzyBubbles-Bold.ttf");
 }
 
+*:before, *:after {
+  box-sizing: border-box;
+}
 
 body{
   background-color: #787A91;
   font-family: "Fuzzy", sans-serif;
+  color:#0F044C;
 }
 
 textarea{
-  background-color: #EEEEEE;
   color: #0F044C;
   font-weight: 600;
+  background-color: transparent;
 }

@@ -5,8 +5,7 @@ export default function Button({ onClickRef, children }) {
     <button
       type="button"
       onClick={onClickRef}
-      className="font-medium rounded-lg text-sm px-5
-    py-2.5 text-center mr-2 mb-2"
+      className="b bg-whity border border-whity py-2 px-6 text-lg rounded-lg fo font-fuzzyBold hover:bg-grayy transition-all"
     >
       {children}
     </button>
