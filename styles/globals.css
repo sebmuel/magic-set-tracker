@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/***
+#EEEEEE
+#787A91
+#141E61
+#0F044C
+***/
+
+@font-face {
+  font-family: "Fuzzy";
+  src: url("../public/fonts/FuzzyBubbles-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Fuzzy-Bold";
+  src: url("../public/fonts/FuzzyBubbles-Bold.ttf");
+}
+
+
 body{
-  background-color: #414369;
+  background-color: #787A91;
+  font-family: "Fuzzy", sans-serif;
+}
+
+textarea{
+  background-color: #EEEEEE;
+  color: #0F044C;
+  font-weight: 600;
 }

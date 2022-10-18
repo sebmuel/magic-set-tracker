@@ -1,8 +1,8 @@
-import { Alert } from "flowbite-react";
 import { sortSet, cardsToSet, filterCards, validateSearchString } from "../services/helpers";
 import { useState, useRef } from "react";
 import fetchList from "../services/fetchList";
 import Button from "./_Button";
+import Image from "next/image";
 
 export default function SearchForm({ enterCards }) {
   const [error, setError] = useState();
@@ -42,19 +42,15 @@ export default function SearchForm({ enterCards }) {
         <label>Eingabe der Kartenliste:</label>
       </div>
       <div className="">
-        <textarea ref={cardList} className="h-80 min-h-[500px] w-2/4 bg-slate-500"></textarea>
+        <textarea ref={cardList} className="h-80 min-h-[500px] w-2/4"></textarea>
       </div>
       <div className="text-center py-6">
         <Button type="button" onClickRef={handleSearch} buttonText={"Suchen"}>
           Suchen
           </Button>
-          {isLoading ? <img className="w w-8 mx-auto" src="oval.svg"></img> :null}
+          {isLoading ? <Image width={200} height={200} className="mx-auto" src="oval.svg" alt="Loader"></Image> :null}
       </div>
-      {error ? (
-        <Alert color="failure" icon={HiInformationCircle}>
-          {error}
-        </Alert>
-      ) : null}
+      {error ? "hi" : null}
     </div>
   );
 }
