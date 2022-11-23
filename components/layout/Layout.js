@@ -12,7 +12,11 @@ export default function Layout({ children }) {
       {children}
       <footer className="bg-darkBlue mt-64">
         <div className="w-[90%] mx-auto px-6 flex justify-end py-12">
+<<<<<<< HEAD
         <p className="text-whity">Copyright shitty as text</p>
+=======
+        <p className=" text-whity">Copyright shitty as text</p>
+>>>>>>> 5ecd1d7a6227c5d659025362480d4993c43c5d65
         </div>
       </footer>
     </>
