@@ -11,24 +11,24 @@ export function sortSet(a, b) {
 export function cardsToSet(cards) {
   const setDictionary = {};
   for (const card of cards) {
-    if (card.set_name in setDictionary) {
-      setDictionary[card.set_name].push(card);
-    } else {
-      setDictionary[card.set_name] = [card];
+    for (const c of card) {
+      if (c.set_name in setDictionary) {
+        setDictionary[c.set_name].push(c);
+      } else {
+        setDictionary[c.set_name] = [c];
+      }
     }
   }
   return setDictionary;
 }
 
 export function filterCards(searchString) {
-    const names = searchString
-      .split("\n")
-      .map((s) => {
-        const name = s.substring(s.indexOf(" ") + 1);
-        if (!filterBasicLands.includes(name)) return name;
-        return null;
-      })
-      return names;
+  const names = searchString.split("\n").map((s) => {
+    const name = s.substring(s.indexOf(" ") + 1);
+    if (!filterBasicLands.includes(name)) return name;
+    return null;
+  });
+  return names;
 }
 
 export const validateSearchString = (searchString, stringType) => {
@@ -36,4 +36,4 @@ export const validateSearchString = (searchString, stringType) => {
     return false;
   }
   return true;
-}
+};

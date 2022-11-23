@@ -1,35 +1,23 @@
 import { useState } from "react";
-import { Accordion } from "flowbite-react";
 import SearchForm from "../components/SearchForm";
-import Card from "../components/Card";
+import SetList from "../components/SetList";
+import Layout from "../components/layout/Layout";
 
 export default function Home() {
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState();
+  console.log(results);
 
   return (
-    <div className="max-w-[90%] mx-auto p-6">
-      <SearchForm enterCards={setResults}></SearchForm>
-    <div className="">
-    <Accordion alwaysOpen={true}>
-      {results
-        ? results.map((result) => (
-          <Accordion.Panel key={result[0]}>
-          <Accordion.Title className="set-name">
-            <h2 className="text-lg text-teal-400">{result[0]}</h2>
-            </Accordion.Title>
-          <Accordion.Content>
-            {/* TODO: GRID */}
-            <div>
-            {result[1].map((card) => (
-              <Card key={card.id} cardData={card} />
-            ))}
-            </div>
-          </Accordion.Content>
-        </Accordion.Panel>
-          ))
-        : null}
-        </Accordion>
-    </div>
-    </div>
+    <Layout>
+      <div className="max-w-[90%] mx-auto p-6">
+        <SearchForm enterCards={setResults}></SearchForm>
+        <div className="">
+          {results ? Object.entries(results).map(([setName, cards]) => {
+            console.log(setName)
+              return <SetList key={setName} name={setName} cards={cards}></SetList>
+          }) : ""}
+        </div>
+      </div>
+    </Layout>
   );
 }

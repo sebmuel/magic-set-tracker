@@ -1,19 +1,11 @@
 import Card from "./Card";
-import { Accordion } from "flowbite-react";
 
-export default function SetList({ result }) {
-  const setName = result[0];
-  const cards = result[1];
-  const cardsAmount = cards.length;
-  
+export default function SetList({ name, cards }) {
+
   return (
-    <Accordion.Panel>
-      <Accordion.AccordionTitle className="set-name">{setName}-Anzahl:{cardsAmount}</Accordion.AccordionTitle>
-      <Accordion.Content>
-        {cards.map((card) => (
-          <Card key={card.id} cardData={card} />
-        ))}
-      </Accordion.Content>
-    </Accordion.Panel>
+    <div>
+      <h2 className=" font-bold text-lg">{name}</h2>
+      {cards ? cards.map((c) => <Card key={c.id}  card={c}/>) : null}
+    </div>
   );
 }
