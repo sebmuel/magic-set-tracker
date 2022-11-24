@@ -12,7 +12,7 @@ module.exports = {
       {
         protocol: 'https',
         hostname: 'cards.scryfall.io',
-        pathname: '/small/**',
+        pathname: '/normal/**',
       },
     ],
   },
