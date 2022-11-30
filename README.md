@@ -1,34 +1,87 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1 Adeline, Resplendent Cathar
+1 Arasta of the Endless Web
+1 Arcane Signet
+1 Artifact Mutation
+1 Aura Mutation
+1 Avacyn's Pilgrim
+1 Avenger of Zendikar
+1 Beast Whisperer
+1 Beast Within
+1 Beastmaster Ascension
+1 Birds of Paradise
+1 Boros Charm
+1 Boros Garrison
+1 Cabaretti Courtyard
+1 Call the Coppercoats
+1 Camaraderie
+1 Canopy Vista
+1 Champion of Lambholt
+1 Cinder Glade
+1 Combat Calligrapher
+1 Command Tower
+1 Cultivate
+1 Curious Herd
+1 Dragonlair Spider
+1 Elvish Mystic
+1 Esper Sentinel
+1 Exotic Orchard
+1 Fabled Passage
+1 Farewell
+1 Farseek
+1 Felidar Retreat
+7 Forest
+1 Fyndhorn Elves
+1 Gavony Township
+1 Generous Gift
+1 Grand Crescendo
+1 Gruul Turf
+1 Hanweir Garrison
+1 Harmonize
+1 Idol of Oblivion
+1 Indulge/Excess
+1 Iroas, God of Victory
+1 Jetmir, Nexus of Revels
+1 Jetmir's Garden
+1 Jinnie Fay, Jetmir's Second
+1 Jungle Shrine
+1 Kher Keep
+1 Kodama's Reach
+1 Krenko, Tin Street Kingpin
+1 Llanowar Elves
+1 March of the Multitudes
+1 Mirari's Wake
+4 Mountain
+1 Nacatl War-Pride
+1 Nature's Lore
+1 Naya Charm
+1 Ohran Frostfang
+1 Parallel Lives
+1 Path to Exile
+5 Plains
+1 Rabble Rousing
+1 Rampant Growth
+1 Rhys the Redeemed
+1 Rite of Harmony
+1 Rugged Highlands
+1 Rumor Gatherer
+1 Sacred Foundry
+1 Scute Swarm
+1 Second Harvest
+1 Secure the Wastes
+1 Selesnya Sanctuary
+1 Shamanic Revelation
+1 Skullclamp
+1 Smothering Tithe
+1 Sol Ring
+1 Stomping Ground
+1 Sungrass Prairie
+1 Swords to Plowshares
+1 Sylvan Library
+1 Temple Garden
+1 Temple of Abandon
+1 Temple of Plenty
+1 Three Visits
+1 Tibalt's Trickery
+1 Vanquish the Horde
+1 Welcoming Vampire
+1 Zendikar Resurgent

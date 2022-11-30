@@ -4,21 +4,32 @@ import Button from "./_Button";
 import Image from "next/image";
 import Filters from "./layout/Filters";
 import SetList from "./SetList";
-import { cardsToSet } from "../services/helpers";
+import { cardsToSet, sortSet } from "../services/helpers";
 
 export default function SearchForm({ enterCards }) {
+  "use Strict";
   const [error, setError] = useState();
   const [isLoading, setLoading] = useState(false);
 
   const cardList = useRef();
 
-  const  handleSearch = () => {
-   fetchList(cardList).then(res => {
-    const setDictionary = cardsToSet(res.data);
-    enterCards(setDictionary);	
-   })
+  const handleSearch = () => {
+    setLoading(true);
+
+    fetchList(cardList).then((res) => {
+      if (res) {
+        const setDictionary = cardsToSet(res.data);
+        // setDictionary = sortSet(setDictionary);
+        console.log(setDictionary);
+
+        enterCards(setDictionary);
+      } else {
+        // TODO: notification to user
+        console.log("NO INPUT");
+      }
+    });
+    setLoading(false);
   };
-  
 
   return (
     <div>
